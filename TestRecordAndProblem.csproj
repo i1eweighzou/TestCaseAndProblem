@@ -1,0 +1,339 @@
+﻿<Project ToolsVersion="16.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProjectTypeGuids>{BAA0C2D2-18E2-41B9-852F-F413020CAA33};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <RootNamespace>TestCaseAndProblem</RootNamespace>
+    <AssemblyName>TestCaseAndProblem</AssemblyName>
+    <VSTO_HostDocumentName>TestRecordAndProblemRecord.xlsx</VSTO_HostDocumentName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <DefineConstants>VSTO40</DefineConstants>
+    <OfficeApplication>Excel</OfficeApplication>
+    <ProjectGuid>{2D493087-0ED3-4F11-AE23-F3E7CB06A1EB}</ProjectGuid>
+    <SolutionID>c30cf31b-1775-49e2-8db0-1e8e393f0145</SolutionID>
+    <IsWebBootstrapper>False</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <PublishUrl>C:\Users\VsimTP\Desktop\publish\</PublishUrl>
+    <InstallUrl />
+    <TargetCulture>zh-chs</TargetCulture>
+    <ApplicationVersion>1.0.0.5</ApplicationVersion>
+    <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>days</UpdateIntervalUnits>
+    <ProductName>TestCaseAndProblem</ProductName>
+    <PublisherName />
+    <SupportUrl />
+    <FriendlyName>TestCaseAndProblem</FriendlyName>
+    <OfficeApplicationDescription />
+  </PropertyGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2010 Tools for Office Runtime %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VSTO_EmbedTypeLibraryInAssembly>false</VSTO_EmbedTypeLibraryInAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <!--
+    This section specifies references for the project.
+  -->
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Word, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionsPaneControlTestCase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionsPaneControlTestCase.Designer.cs">
+      <DependentUpon>ActionsPaneControlTestCase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditItem.cs" />
+    <Compile Include="InterfaceUpdateText.cs" />
+    <Compile Include="OfficeWordUtils.cs" />
+    <Compile Include="PictureUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EditItemsSheet.cs">
+      <DependentUpon>TestRecordAndProblemRecord.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="EditItemsSheet.Designer.cs">
+      <DependentUpon>EditItemsSheet.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="EditTestRecordSheet.cs">
+      <DependentUpon>TestRecordAndProblemRecord.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="EditTestRecordSheet.Designer.cs">
+      <DependentUpon>EditTestRecordSheet.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="RangeUtils.cs" />
+    <Compile Include="ProblemSheet.cs">
+      <DependentUpon>TestRecordAndProblemRecord.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="ProblemSheet.Designer.cs">
+      <DependentUpon>ProblemSheet.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseProblemSheet.cs">
+      <DependentUpon>TestRecordAndProblemRecord.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseProblemSheet.Designer.cs">
+      <DependentUpon>ChooseProblemSheet.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonTestcaseAndProblem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RibbonTestcaseAndProblem.Designer.cs">
+      <DependentUpon>RibbonTestcaseAndProblem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProblemSheet.cs">
+      <DependentUpon>TestRecordAndProblemRecord.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProblemSheet.Designer.cs">
+      <DependentUpon>EditProblemSheet.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="TestRecordAndProblemSheet.cs">
+      <DependentUpon>TestRecordAndProblemRecord.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="TestRecordAndProblemSheet.Designer.cs">
+      <DependentUpon>TestRecordAndProblemSheet.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="TestRecordSheet.cs">
+      <DependentUpon>TestRecordAndProblemRecord.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="TestRecordSheet.Designer.cs">
+      <DependentUpon>TestRecordSheet.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="ThisWorkbook.cs">
+      <DependentUpon>TestRecordAndProblemRecord.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="ThisWorkbook.Designer.cs">
+      <DependentUpon>ThisWorkbook.Designer.xml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ActionsPaneControlTestCase.resx">
+      <DependentUpon>ActionsPaneControlTestCase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseProblemSheet.resx">
+      <DependentUpon>ChooseProblemSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProblemSheet.resx">
+      <DependentUpon>EditProblemSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTestRecordSheet.resx">
+      <DependentUpon>EditTestRecordSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProblemSheet.resx">
+      <DependentUpon>ProblemSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RibbonTestcaseAndProblem.resx">
+      <DependentUpon>RibbonTestcaseAndProblem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestRecordSheet.resx">
+      <DependentUpon>TestRecordSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThisWorkbook.resx">
+      <DependentUpon>ThisWorkbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="problem.docx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TestRecordAndProblemRecord.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="test_record.docx" />
+    <None Include="ThisWorkbook.Designer.xml">
+      <DependentUpon>ThisWorkbook.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestRecordSheet.Designer.xml">
+      <DependentUpon>TestRecordSheet.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EditItemsSheet.Designer.xml">
+      <DependentUpon>EditItemsSheet.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EditTestRecordSheet.Designer.xml">
+      <DependentUpon>EditTestRecordSheet.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProblemSheet.Designer.xml">
+      <DependentUpon>ProblemSheet.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ChooseProblemSheet.Designer.xml">
+      <DependentUpon>ChooseProblemSheet.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestRecordAndProblemSheet.Designer.xml">
+      <DependentUpon>TestRecordAndProblemSheet.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EditProblemSheet.Designer.xml">
+      <DependentUpon>EditProblemSheet.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TestCaseAndProblem_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D48645154972BF3A9C08B4C7E8CE6368CC9C76B6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\OfficeTools\Microsoft.VisualStudio.Tools.Office.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
+        <ProjectProperties HostName="TestRecordAndProblemRecord.xlsx" HostPackage="{3F2B7691-D1D1-402F-9370-2704A737CF60}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="XLS" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files (x86)\Microsoft Office\root\Office16\excel.exe" DebugInfoCommandLine="/x &quot;[$OUTPUT]TestRecordAndProblemRecord.xlsx&quot;" />
+        <Host Name="Excel Document" Path=".\TestRecordAndProblemRecord.xlsx" GeneratedCodeNamespace="TestCaseAndProblem" PublishedHash="4D8E879928CBA270A29ED7FD412557FCA49DBAF9">
+          <HostItem Name="Sheet5" Code="ChooseProblemSheet.cs" CanonicalName="Sheet5" PublishedHash="57EE57858D228F57C817885F66F57C87858A5E6E" CanActivate="false" DisplayName="关联问题" Blueprint="ChooseProblemSheet.Designer.xml" GeneratedCode="ChooseProblemSheet.Designer.cs" />
+          <HostItem Name="Sheet2" Code="EditItemsSheet.cs" CanonicalName="Sheet2" PublishedHash="C72B65DD7F10BD45313DCE83B350750A6AFE306C" CanActivate="false" DisplayName="详细编辑项" Blueprint="EditItemsSheet.Designer.xml" GeneratedCode="EditItemsSheet.Designer.cs" />
+          <HostItem Name="Sheet7" Code="EditProblemSheet.cs" CanonicalName="Sheet7" PublishedHash="CD2644B8318D8BA645B9D305F3D58AF6EAD0828C" CanActivate="false" DisplayName="编辑问题" Blueprint="EditProblemSheet.Designer.xml" GeneratedCode="EditProblemSheet.Designer.cs" />
+          <HostItem Name="Sheet3" Code="EditTestRecordSheet.cs" CanonicalName="Sheet3" PublishedHash="638D15BA6CF588F8C2ED3D3FF9FCBBAE1556D914" CanActivate="false" DisplayName="编辑测试步骤" Blueprint="EditTestRecordSheet.Designer.xml" GeneratedCode="EditTestRecordSheet.Designer.cs" />
+          <HostItem Name="Sheet4" Code="ProblemSheet.cs" CanonicalName="Sheet4" PublishedHash="3E0A0EBF11D2CC09A37DB222940589A755ED4F04" DisplayName="测试问题" Blueprint="ProblemSheet.Designer.xml" GeneratedCode="ProblemSheet.Designer.cs" />
+          <HostItem Name="Sheet6" Code="TestRecordAndProblemSheet.cs" CanonicalName="Sheet6" PublishedHash="BDD8A841ED6BC2EC69926FDCBD105D3D835D1E33" CanActivate="false" DisplayName="用例和问题" Blueprint="TestRecordAndProblemSheet.Designer.xml" GeneratedCode="TestRecordAndProblemSheet.Designer.cs" />
+          <HostItem Name="Sheet1" Code="TestRecordSheet.cs" CanonicalName="Sheet1" PublishedHash="1F481C59E69DB2DDC6768A6A4B2B6F4A3904666E" DisplayName="测试记录" Blueprint="TestRecordSheet.Designer.xml" GeneratedCode="TestRecordSheet.Designer.cs" />
+          <HostItem Name="ThisWorkbook" Code="ThisWorkbook.cs" CanonicalName="ThisWorkbook" PublishedHash="14CFC990E810EC29D185E2DC4C925D6C5EC65C95" Blueprint="ThisWorkbook.Designer.xml" GeneratedCode="ThisWorkbook.Designer.cs" />
+        </Host>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!--
+    To modify your build process, add your task inside one of the targets below and uncomment it.
+    Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
